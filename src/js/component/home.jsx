@@ -94,25 +94,7 @@ const Home = () => {
         }
     };
 
-    /*const eliminarTarea = async (id) => {
-        try {
-            const response = await fetch(`https://playground.4geeks.com/todo/todos/${id}`, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-            const data = await response.text();
-
-            setLista(data.todos);
-            console.log('ID de la tarea a eliminar:', id);
-
-            console.log('tarea eliminada');
-        } catch (error) {
-            console.log('Error:', error);
-        }
-    };*/
-
+   
     const eliminarTarea = async (id) => {
         try {
             const respuesta = await fetch(`https://playground.4geeks.com/todo/todos/${id}`, {
@@ -147,35 +129,6 @@ const Home = () => {
         }
     };
 
-    /* const editar = async (id) => {
-        try {
-            const respuesta = await fetch(`https://playground.4geeks.com/todo/todos/${id}`, {
-                method: 'PUT',
-            });
-
-            console.log(respuesta);
-            const data = await respuesta.json(); // por que con .text funciona bien?
-            // falta algo
-        } catch (error) {
-            console.error('Error al eliminar la tarea:', error);
-        }
-    };*/
-
-    /*const editar = async (id, nuevaLabelTarea) => {
-        const response = await fetch(`https://playground.4geeks.com/todo/todos/${id}`, {
-            method: 'PUT',
-            body: JSON.stringify({
-                label: nuevaLabelTarea,
-                is_done: true,
-            }),
-        });
-        const data = await response.json();
-        setLista(
-            lista.map((item) => {
-                return id === item.id ? data: item
-            }),
-        );
-    };*/
 
     useEffect(() => {
         crearUser();
