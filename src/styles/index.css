@@ -10,3 +10,20 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.home {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    background-color: red;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+}
+
+.list-group {
+    padding: 50px;
+}
